@@ -8,9 +8,6 @@ const Main = () => {
             <section>
                 <div>
                     <img src={mainPhoto} alt="메인 이미지" />
-                    <div>
-                            <img src={mainPhoto} alt="메인 이미지" />
-                    </div>
                 </div>
             </section>
         </div>
