@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
-import users from "../datas/users";
+import users from "../datas/users"
+import { Link, useNavigate } from "react-router-dom";
 
 const SignIn = ({onLogin}) => {
     const [formData, setFormData] = useState({
@@ -46,11 +46,9 @@ const SignIn = ({onLogin}) => {
         }else{
             setResult("fail");
         }
-
         // 입력값 초기화
         //setFormData({username: "", password: ""});
     }
-
 
     return(
         <div className="sign-in">
@@ -83,7 +81,7 @@ const SignIn = ({onLogin}) => {
             <p className="signup-link">
                 아직 계정이 없으신가요? <Link to="/signup">회원가입</Link>
             </p>
-            
+
             {/* 결과 메시지 출력 */}
             {result === "fail" && (
                 <p style={{color: "red"}}>아이디 또는 비밀번호가 일치하지 않습니다.</p>

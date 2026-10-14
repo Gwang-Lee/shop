@@ -1,13 +1,13 @@
 
-import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Header from './layouts/Header'
 import Main from './layouts/Main'
-import AddProduct from './products/AddProduct'
-import ProductInfo from './products/ProductInfo'
+import Header from './layouts/Header'
 import ProductList from './products/ProductList'
+import ProductInfo from './products/ProductInfo'
+import AddProduct from './products/AddProduct'
 import SignIn from './users/SiginIn'
+import { useState } from 'react'
 import SignUp from './users/SignUp'
 
 function App() {
@@ -20,21 +20,20 @@ function App() {
   // 로그인 함수
   const handleLogin = (username) => {
     setIsLoggedIn(true);
-    setUsername(username); // 로그인한 사용자 상태 저장
+    setUsername(username); //로그인한 사용자 상태(ID) 저장
   }
 
   // 로그아웃 핸들러 함수
   const handleLogout = () => {
     setIsLoggedIn(false);
-    setUsername("");
   }
 
   return (
     <>
       <section className="app">
         <BrowserRouter>
-          <Header
-            isLoggedIn={isLoggedIn}
+          <Header 
+            isLoggedIn={isLoggedIn} 
             username={username}
             onLogout={handleLogout}
           />
