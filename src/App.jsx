@@ -1,13 +1,14 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
-import Main from './layouts/Main'
-import Header from './layouts/Header'
-import ProductList from './products/ProductList'
-import ProductInfo from './products/ProductInfo'
-import AddProduct from './products/AddProduct'
-import SignIn from './users/SiginIn'
 import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import Header from './layouts/Header'
+import Main from './layouts/Main'
+import AddProduct from './products/AddProduct'
+import ProductInfo from './products/ProductInfo'
+import ProductList from './products/ProductList'
+import SignIn from './users/SiginIn'
+import SignUp from './users/SignUp'
 
 function App() {
   // 로그인 상태 관리
@@ -44,6 +45,7 @@ function App() {
               <Route path='/products/:id' element={<ProductInfo />} />
               <Route path='/add-product' element={<AddProduct />} />
               <Route path='/signin' element={<SignIn onLogin={handleLogin} />} />
+              <Route path='/signup' element={<SignUp />} />
             </Routes>
           </div>
         </BrowserRouter>
